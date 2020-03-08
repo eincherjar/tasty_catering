@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "NazareHeavy";
+  src: url(../fonts/Nazare-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BigCityGroProLight";
+  src: url(../fonts/BigCityGrotesquePro-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BigCityGroProMedium";
+  src: url(../fonts/BigCityGrotesquePro-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BigCityGroProBold";
+  src: url(../fonts/BigCityGrotesquePro-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BigCityGroProBlack";
+  src: url(../fonts/BigCityGrotesquePro-Black.ttf) format("truetype");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  font-family: "BigCityGroProLight";
+}
+
+h2.title {
+  color: #ffffff;
+  font-family: "NazareHeavy";
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.375;
+}
+
+h2.title.title-dark {
+  color: #2b2b2b;
+}
+
+.button.is-special {
+  background-color: #ff6c39;
+  border: 1px solid #ff6c39;
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0;
+  font-family: "BigCityGroProBold";
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button.is-special:hover {
+  background-color: transparent;
+  color: #ff6c39;
+}
+
+.button.is-special.is-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  padding: 2rem 4rem;
+}
+
+.button.is-special.is-outline:hover {
+  background-color: #ffffff;
+  color: #ff6c39;
+}
+
+.hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8))), url(../img/img_hero.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../img/img_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 102vh;
+}
+
+.hero .navbar-brand {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .navbar-brand img {
+  max-width: 100%;
+  max-height: 3rem;
+}
+
+.hero .navbar-brand:hover {
+  margin-left: 1rem;
+}
+
+.hero .navbar-menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .navbar-menu .navbar-item {
+  color: #ffffff;
+  font-family: "BigCityGroProMedium";
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+  padding: 0.5rem 1.75rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .navbar-menu .navbar-item:hover {
+  background: #ff6c39;
+}
+
+.hero .content {
+  margin-top: 25vh;
+}
+
+.hero h1.title {
+  text-align: center;
+  color: #ffffff;
+  font-family: "NazareHeavy";
+  font-size: 4.5rem;
+  line-height: 5.875rem;
+  font-weight: 900;
+}
+
+.hero h2.subtitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-family: "BigCityGroProLight";
+  font-weight: 300;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.about {
+  background-color: #ff6c39;
+}
+
+.about .image {
+  height: 100%;
+}
+
+.about .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.about .column:first-of-type {
+  padding: 5.625rem 8.5rem !important;
+}
+
+.about p {
+  font-family: "BigCityGroProLight";
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: justify;
+  margin-bottom: 2.25rem;
+}
+
+.price {
+  padding: 9.2rem 9rem;
+}
+
+.price p {
+  width: 85%;
+  margin-left: auto;
+  text-align: justify;
+  color: #5d5f65;
+}
+
+.price .checkbox {
+  color: #2b2b2b;
+}
+
+.price .fa-paper-plane {
+  margin-right: 1rem;
+}
+
+.price .field {
+  margin-bottom: 1.125rem;
+}
+
+.price .label {
+  font-family: "BigCityGroProBold";
+}
+
+.price .input,
+.price .textarea {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #2b2b2b;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.price .input::-webkit-input-placeholder,
+.price .textarea::-webkit-input-placeholder {
+  color: #5d5f65;
+  opacity: 0.5;
+}
+
+.price .input:-ms-input-placeholder,
+.price .textarea:-ms-input-placeholder {
+  color: #5d5f65;
+  opacity: 0.5;
+}
+
+.price .input::-ms-input-placeholder,
+.price .textarea::-ms-input-placeholder {
+  color: #5d5f65;
+  opacity: 0.5;
+}
+
+.price .input::placeholder,
+.price .textarea::placeholder {
+  color: #5d5f65;
+  opacity: 0.5;
+}
+
+.shop {
+  background-color: #ff6c39;
+  padding: 2rem 9rem;
+}
+
+.shop h4.title {
+  color: #ffffff;
+  font-family: "BigCityGroProBold";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  text-align: center;
+}
+
+.shop .fa-shopping-basket {
+  margin-right: 2rem;
+}
+
+.shop .is-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop .is-flex:first-of-type {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shop .button {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.menu {
+  padding: 4.5rem 9rem 9rem 9rem;
+  background-color: #efefef;
+}
+
+.menu .panel {
+  height: 100%;
+}
+
+.menu .panel,
+.menu .panel-heading {
+  background-color: #ffffff;
+}
+
+.menu .panel-heading {
+  font-family: "BigCityGroProBold";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.menu .panel-block {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .panel-block span {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: #ffffff;
+}
+
+.menu .panel-block span.tag {
+  font-family: "BigCityGroProBold";
+  background-color: transparent;
+}
+
+.menu .panel-block.has-text-centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact {
+  background-color: #ff6c39;
+}
+
+.contact .image {
+  height: 100%;
+}
+
+.contact .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.contact .columns:last-child {
+  margin-bottom: 0;
+}
+
+.contact .column:last-of-type {
+  padding: 5rem 6.2rem !important;
+}
+
+.contact form .input,
+.contact form .textarea {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.contact form .input::-webkit-input-placeholder,
+.contact form .textarea::-webkit-input-placeholder {
+  color: #efefef;
+  opacity: 0.8;
+}
+
+.contact form .input:-ms-input-placeholder,
+.contact form .textarea:-ms-input-placeholder {
+  color: #efefef;
+  opacity: 0.8;
+}
+
+.contact form .input::-ms-input-placeholder,
+.contact form .textarea::-ms-input-placeholder {
+  color: #efefef;
+  opacity: 0.8;
+}
+
+.contact form .input::placeholder,
+.contact form .textarea::placeholder {
+  color: #efefef;
+  opacity: 0.8;
+}
+
+.contact form .button.is-special {
+  background-color: #ffffff;
+  color: #ff6c39;
+  border: 2px solid #ffffff;
+  margin-top: 1rem;
+}
+
+.contact form .button.is-special:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.contact form .button.is-special .fa-paper-plane {
+  margin-right: 1rem;
+}
+
+.footer {
+  padding-top: 9.2rem;
+}
+
+.footer .map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.footer .map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.footer span {
+  margin-top: 7rem;
+  font-family: "BigCityGroProBold";
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

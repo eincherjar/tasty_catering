@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Catering</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="hero" id="section-hero">
+      <div class="hero-body">
+        <div class="container">
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="./img/logo.png" />
+              </a>
+
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item">
+                  O nas
+                </a>
+
+                <a class="navbar-item">
+                  Wycena
+                </a>
+
+                <a class="navbar-item">
+                  Menu
+                </a>
+
+                <a class="navbar-item">
+                  Kontakt
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="content">
+            <h1 class="title">
+              Tasty Catering
+            </h1>
+            <h2 class="subtitle">
+              Wybierz to co lubisz i odbierz w wybranym przez siebie terminie lub zamów wygodnie z dostawą do domu
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="section-about">
+      <div class="container is-fluid is-paddingless">
+        <div class="columns">
+          <div class="column is-half is-paddingless">
+            <div class="container">
+              <h2 class="title has-text-centered">O nas</h2>
+              <p>W ofercie <b>Tasty</b> znajdziecie państwo pyszne i świeże dania kuchni polskiej w nowoczesnej interpretacji z dbałością o bilans składników odżywczych.</p>
+              <p>
+                Nasze potrawy to połączenie smaku, doświadczenia i pasji. Posiłki przygotowywane są codziennie aby zachować najwyższą jakość oraz smak. Dania tworzone są z wykorzystaniem składników
+                pochodzących od lokalnych producentów i dostawców by zachować najwyższą jakość i smak.
+              </p>
+              <p>Unikalne sezonowe składniki sprawiają, że nasze menu zmienia się wraz z porami roku by wykorzystać najlepsze sezonowe składniki i wydobyć z nich jak najwięcej smaku.</p>
+              <p>Oprócz codziennych obiadów zajmujemy się również przygotowani i obsługą imprez okolicznościowych zarówno na potrzeby prywatne jak i biznesowe.</p>
+            </div>
+          </div>
+          <div class="column is-half is-paddingless">
+            <figure class="image">
+              <img src="./img/img_about.jpg" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price" id="section-price">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half">
+            <form action="#">
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Imię i nazwisko*" />
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control is-expanded">
+                  <input class="input" type="email" placeholder="Email*" />
+                </div>
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Telefon*" />
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Data planowanej imprezy*" />
+                </div>
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Przewidywana liczba gości*" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Oferta*</label>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Przystawki
+                  </label>
+                </div>
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Danie pierwsze
+                  </label>
+                </div>
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Danie główne
+                  </label>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Ciasta i desery
+                  </label>
+                </div>
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Wersja Vege
+                  </label>
+                </div>
+                <div class="control is-expanded has-text-centered">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Obsługa
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Uwagi"></textarea>
+                </div>
+              </div>
+
+              <div class="field is-grouped is-grouped-right">
+                <div class="control">
+                  <button class="button is-special"><i class="fas fa-paper-plane"></i> wyślij</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column is-half">
+            <h2 class="title title-dark has-text-centered">Wycena</h2>
+            <p class="text-dark .has-text-justified">
+              Napisz nam czego oczekujesz. Potrzebujesz poczęstunku dla przyjaciół, kuchni tradycyjnej czy bardziej nowoczesnej, a może przyjęcie niespodzianka. Powiedz nam, a przygotujemy dla Ciebie
+              skrojoną na Twoje potrzeby ofertę.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop section-shop">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-two-thirds is-flex">
+            <h4 class="title has-text-right">Zapraszamy do naszego sklepu</h4>
+          </div>
+          <div class="column is-flex">
+            <a href="#" class="button is-special is-outline"><i class="fas fa-shopping-basket"></i> sklep</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="section-menu">
+      <div class="container">
+        <h2 class="title title-dark has-text-centered">Menu</h2>
+        <div class="columns">
+          <div class="column is-one-third">
+            <nav class="panel">
+              <p class="panel-heading has-text-centered">
+                Pierogi
+              </p>
+              <p class="panel-block">
+                <span>ruskie* od</span>
+                <span class="tag">17,00 zł/kg</span>
+              </p>
+              <p class="panel-block">
+                <span>z mięsem* od</span>
+                <span class="tag">25,00 zł/kg</span>
+              </p>
+              <p class="panel-block">
+                <span>z kapustą* od</span>
+                <span class="tag">23,00 zł/kg</span>
+              </p>
+              <p class="panel-block">
+                <span>z grzybami* od</span>
+                <span class="tag">25,00 zł/kg</span>
+              </p>
+              <p class="panel-block">
+                <span>ze szpinakiem* od</span>
+                <span class="tag">20,00 zł/kg</span>
+              </p>
+
+              <div class="panel-block has-text-centered">
+                <span>*- dostępne również w wersji bezglutenowej</span>
+              </div>
+            </nav>
+          </div>
+          <div class="column is-one-third">
+            <nav class="panel">
+              <p class="panel-heading has-text-centered">
+                Krokiety
+              </p>
+              <p class="panel-block">
+                <span>z kapustą* od</span>
+                <span class="tag">25,00 zł/kg</span>
+              </p>
+              <div class="panel-block has-text-centered">
+                <span>*- dostępne również w wersji bezglutenowej</span>
+              </div>
+            </nav>
+          </div>
+          <div class="column is-one-third">
+            <nav class="panel">
+              <p class="panel-heading has-text-centered">
+                Gołąbki
+              </p>
+              <p class="panel-block">
+                <span>tradycyjne* od</span>
+                <span class="tag">25,00 zł/kg</span>
+              </p>
+              <div class="panel-block has-text-centered">
+                <span>*- dostępne również w wersji bezglutenowej</span>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-half">
+            <nav class="panel">
+              <p class="panel-heading has-text-centered">
+                Naleśniki
+              </p>
+              <p class="panel-block">
+                <span>na słodko (ser, owoce)* od</span>
+                <span class="tag">7,50 zł/kg</span>
+              </p>
+              <p class="panel-block">
+                <span>na ostro (szynka, ser, pieczarki)* od</span>
+                <span class="tag">10,00 zł/kg</span>
+              </p>
+              <div class="panel-block has-text-centered">
+                <span>*- dostępne również w wersji bezglutenowej</span>
+              </div>
+            </nav>
+          </div>
+          <div class="column is-half">
+            <nav class="panel">
+              <p class="panel-heading has-text-centered">
+                Ciasta i desery
+              </p>
+              <p class="panel-block">
+                <span>Sernik od</span>
+                <span class="tag">80,00 zł/blacha</span>
+              </p>
+              <p class="panel-block">
+                <span>Malinowa chmurka od</span>
+                <span class="tag">80,00 zł/blacha</span>
+              </p>
+              <p class="panel-block">
+                <span>Tort Szwarcwaldzki od</span>
+                <span class="tag">130,00 zł/średnica 24cm</span>
+              </p>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="section-contact">
+      <div class="container is-fluid is-paddingless">
+        <div class="columns">
+          <div class="column is-half is-paddingless">
+            <figure class="image">
+              <img src="./img/img_contact.jpg" />
+            </figure>
+          </div>
+          <div class="column is-half is-paddingless">
+            <div class="container">
+              <h2 class="title has-text-centered">Kontakt</h2>
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Imię i nazwisko*" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control is-expanded">
+                    <input class="input" type="email" placeholder="Email*" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Uwagi"></textarea>
+                  </div>
+                </div>
+
+                <div class="field is-grouped is-grouped-right">
+                  <div class="control">
+                    <button class="button is-special"><i class="fas fa-paper-plane"></i> wyślij</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer" id="section-footer">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h2 class="title title-dark">FHU Tasty</h2>
+            <p><b>Adres: </b>Wola Żyrakowska 20a, 39-204 Żyraków</p>
+            <p><b>Godziny otwarcia: </b>8:30 - 18:00</p>
+            <p><b>Telefon: </b>504 738 482</p>
+          </div>
+          <div class="column">
+              <div class="map-responsive">
+                  <iframe width="1200" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Wola%20%C5%BByrakowska%2020a%2C%2039-204%20%C5%BByrak%C3%B3w&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+              </div>
+          </div>
+          <div class="columns">
+              <div class="column">
+                  <span><b>©</b> Tasty Catering <b>2019 - 2020 Developed by</b> Marcin Barszcz</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
