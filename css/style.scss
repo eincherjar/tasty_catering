@@ -28,12 +28,16 @@ $font-medium: "BigCityGroProMedium";
 $font-bold: "BigCityGroProBold";
 $font-black: "BigCityGroProBlack";
 $font-special: "NazareHeavy";
-$light-color: #ffffff;
+
+$light-color: #fde5d1;
 $semi-light-color: #efefef;
 $dark-color: #2b2b2b;
 $semi-dark-color: #5d5f65;
+$new-semi-dark-color: #ff8c51;
 $special-color: #ff6c39;
-$overlay: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+$new-special-color: #ffa21a;
+$dark-yellow-color: #ff8b00;
+$overlay: linear-gradient(rgba(255, 108, 57, 0.7), rgba(255, 108, 57, 0.7));
 $section-padding: 9.2rem 9rem;
 $section-padding-small: 2rem 9rem;
 $section-padding-medium: 4.5rem 9rem 9rem 9rem;
@@ -43,6 +47,10 @@ $section-padding-one: 9.2rem;
   box-sizing: border-box;
   outline: none;
   font-family: $font-main;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h2.title {
@@ -96,7 +104,7 @@ h2.title {
 
     img {
       max-width: 100%;
-      max-height: 3rem;
+      max-height: 5rem;
     }
 
     &:hover {
@@ -157,9 +165,14 @@ h2.title {
       height: 100%;
     }
   }
+  .columns:last-child {
+    margin-bottom: 0;
+  }
 
-  .column:first-of-type {
-    padding: 5.625rem 8.5rem !important;
+  .column {
+    &:first-of-type {
+      padding: 5.625rem 8.5rem !important;
+    }
   }
 
   p {
@@ -168,23 +181,28 @@ h2.title {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.625rem;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 2.25rem;
   }
 }
 
 .price {
   padding: $section-padding;
+  background-color: $light-color;
+
+  .title {
+    color: $special-color;
+  }
 
   p {
     width: 85%;
     margin-left: auto;
     text-align: justify;
-    color: $semi-dark-color;
+    color: $special-color;
   }
 
   .checkbox {
-    color: $dark-color;
+    color: $special-color;
   }
 
   .fa-paper-plane {
@@ -197,18 +215,28 @@ h2.title {
 
   .label {
     font-family: $font-bold;
+    color: $special-color;
   }
 
   .input,
   .textarea {
     border: 0;
     border-radius: 0;
-    border-bottom: 2px solid $dark-color;
+    border-bottom: 2px solid $special-color;
     box-shadow: none;
+    background-color: transparent;
 
     &::placeholder {
-      color: $semi-dark-color;
+      color: $new-semi-dark-color;
       opacity: 0.5;
+    }
+  }
+
+  .button.is-special {
+    color: $light-color;
+
+    &:hover {
+      color: $special-color;
     }
   }
 }
@@ -246,10 +274,16 @@ h2.title {
 
 .menu {
   padding: $section-padding-medium;
-  background-color: $semi-light-color;
+  background-color: $new-special-color;
+
+  .title {
+    color: $light-color;
+  }
 
   .panel {
     height: 100%;
+    box-shadow: 0 0.5em 1em -0.125em rgba(255, 139, 0, 1), 0 0 0 1px rgba(255, 139, 0, 1);
+    border-radius: 0;
   }
 
   .panel,
@@ -262,15 +296,22 @@ h2.title {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.625rem;
+    color: $dark-yellow-color;
   }
 
   .panel-block {
     justify-content: space-between;
+    color: $dark-yellow-color;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $light-color;
+    }
 
     span {
       font-size: 1rem;
       line-height: 1.625rem;
-      font-family: $light-color;
+      color: $dark-yellow-color;
+      font-family: $font-bold;
 
       &.tag {
         font-family: $font-bold;
@@ -338,6 +379,13 @@ h2.title {
 }
 
 .footer {
+  background-color: $light-color;
+  color: $special-color;
+
+  .title {
+    color: $special-color;
+  }
+
   padding-top: $section-padding-one;
   .map-responsive {
     overflow: hidden;
