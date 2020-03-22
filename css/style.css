@@ -86,6 +86,9 @@ h2.title.title-dark {
 .hero .navbar-brand {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero .navbar-brand img {
@@ -97,10 +100,26 @@ h2.title.title-dark {
   margin-left: 1rem;
 }
 
+.hero .navbar-burger span {
+  background-color: #fde5d1;
+  height: 3px;
+  width: 24px;
+}
+
+.hero .navbar-burger:hover {
+  background-color: transparent;
+}
+
 .hero .navbar-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero .navbar-menu {
+    background-color: #ff8c51;
+  }
 }
 
 .hero .navbar-menu .navbar-item {
@@ -117,8 +136,20 @@ h2.title.title-dark {
   background: #ff6c39;
 }
 
+@media (max-width: 768px) {
+  .hero .navbar-menu .navbar-item {
+    text-align: center;
+  }
+}
+
 .hero .content {
   margin-top: 25vh;
+}
+
+@media (max-width: 768px) {
+  .hero .content {
+    margin-top: 15vh;
+  }
 }
 
 .hero h1.title {
@@ -128,6 +159,13 @@ h2.title.title-dark {
   font-size: 4.5rem;
   line-height: 5.875rem;
   font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .hero h1.title {
+    font-size: 3.5rem;
+    line-height: 4.875rem;
+  }
 }
 
 .hero h2.subtitle {
@@ -141,8 +179,15 @@ h2.title.title-dark {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .hero h2.subtitle {
+    width: 90vw;
+  }
+}
+
 .about {
   background-color: #ff6c39;
+  overflow: hidden;
 }
 
 .about .image {
@@ -163,6 +208,12 @@ h2.title.title-dark {
   padding: 5.625rem 8.5rem !important;
 }
 
+@media (max-width: 768px) {
+  .about .column:first-of-type {
+    padding: 24px !important;
+  }
+}
+
 .about p {
   font-family: "BigCityGroProLight";
   color: #fde5d1;
@@ -173,9 +224,49 @@ h2.title.title-dark {
   margin-bottom: 2.25rem;
 }
 
+@media (max-width: 768px) {
+  .about p {
+    text-align: center;
+  }
+}
+
 .price {
   padding: 9.2rem 9rem;
   background-color: #fde5d1;
+}
+
+@media (max-width: 768px) {
+  .price .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .price .column:last-of-type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .price .column:first-of-type {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    padding: 24px !important;
+  }
 }
 
 .price .title {
@@ -187,6 +278,12 @@ h2.title.title-dark {
   margin-left: auto;
   text-align: justify;
   color: #ff6c39;
+}
+
+@media (max-width: 768px) {
+  .price p {
+    width: 100%;
+  }
 }
 
 .price .checkbox {
@@ -253,13 +350,25 @@ h2.title.title-dark {
   padding: 2rem 9rem;
 }
 
+@media (max-width: 768px) {
+  .shop {
+    padding: 24px !important;
+  }
+}
+
 .shop h4.title {
   color: #fde5d1;
   font-family: "BigCityGroProBold";
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.75rem;
-  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .shop h4.title {
+    line-height: 2.75rem;
+    text-align: center !important;
+  }
 }
 
 .shop .fa-shopping-basket {
@@ -270,6 +379,14 @@ h2.title.title-dark {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 768px) {
+  .shop .is-flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .shop .is-flex:first-of-type {
@@ -286,6 +403,12 @@ h2.title.title-dark {
 .menu {
   padding: 4.5rem 9rem 9rem 9rem;
   background-color: #ffa21a;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 24px !important;
+  }
 }
 
 .menu .title {
@@ -343,6 +466,7 @@ h2.title.title-dark {
 
 .contact {
   background-color: #ff6c39;
+  overflow: hidden;
 }
 
 .contact .image {
@@ -361,6 +485,20 @@ h2.title.title-dark {
 
 .contact .column:last-of-type {
   padding: 5rem 6.2rem !important;
+}
+
+@media (max-width: 768px) {
+  .contact .column:last-of-type {
+    padding: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .field.is-grouped.is-grouped-right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .contact form .input,
@@ -414,14 +552,32 @@ h2.title.title-dark {
   margin-right: 1rem;
 }
 
+@media (max-width: 768px) {
+  .contact form .button.is-special {
+    margin: 0 auto;
+  }
+}
+
 .footer {
   background-color: #fde5d1;
   color: #ff6c39;
   padding-top: 9.2rem;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 1rem;
+  }
+}
+
 .footer .title {
   color: #ff6c39;
+}
+
+@media (max-width: 768px) {
+  .footer .title {
+    text-align: center;
+  }
 }
 
 .footer .map-responsive {
@@ -444,5 +600,17 @@ h2.title.title-dark {
   font-family: "BigCityGroProBold";
   display: block;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer span {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer p {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

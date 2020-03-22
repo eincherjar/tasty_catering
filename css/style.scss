@@ -43,6 +43,33 @@ $section-padding-small: 2rem 9rem;
 $section-padding-medium: 4.5rem 9rem 9rem 9rem;
 $section-padding-one: 9.2rem;
 
+@mixin for-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (min-width: 769px) and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 1024px) and (max-width: 1215px) {
+    @content;
+  }
+}
+@mixin for-widescreen {
+  @media (min-width: 1216px) and (max-width: 1407px) {
+    @content;
+  }
+}
+
+@mixin for-fullhd {
+  @media (min-width: 1408px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -101,6 +128,7 @@ h2.title {
 
   .navbar-brand {
     transition: all 0.3s ease-in-out;
+    align-items: center;
 
     img {
       max-width: 100%;
@@ -112,8 +140,23 @@ h2.title {
     }
   }
 
+  .navbar-burger {
+    span {
+      background-color: $light-color;
+      height: 3px;
+      width: 24px;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
   .navbar-menu {
     align-items: center;
+    @include for-mobile {
+      background-color: $new-semi-dark-color;
+    }
 
     .navbar-item {
       color: $light-color;
@@ -126,11 +169,19 @@ h2.title {
       &:hover {
         background: $special-color;
       }
+
+      @include for-mobile {
+        text-align: center;
+      }
     }
   }
 
   .content {
     margin-top: 25vh;
+
+    @include for-mobile {
+      margin-top: 15vh;
+    }
   }
 
   h1.title {
@@ -140,6 +191,11 @@ h2.title {
     font-size: 4.5rem;
     line-height: 5.875rem;
     font-weight: 900;
+
+    @include for-mobile {
+      font-size: 3.5rem;
+      line-height: 4.875rem;
+    }
   }
 
   h2.subtitle {
@@ -151,11 +207,16 @@ h2.title {
     font-weight: 300;
     width: 40vw;
     margin: 0 auto;
+
+    @include for-mobile {
+      width: 90vw;
+    }
   }
 }
 
 .about {
   background-color: $special-color;
+  overflow: hidden;
 
   .image {
     height: 100%;
@@ -172,6 +233,10 @@ h2.title {
   .column {
     &:first-of-type {
       padding: 5.625rem 8.5rem !important;
+
+      @include for-mobile {
+        padding: 24px !important;
+      }
     }
   }
 
@@ -183,12 +248,39 @@ h2.title {
     line-height: 1.625rem;
     text-align: left;
     margin-bottom: 2.25rem;
+
+    @include for-mobile {
+      text-align: center;
+    }
   }
 }
 
 .price {
   padding: $section-padding;
   background-color: $light-color;
+
+  .columns {
+    @include for-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .column:last-of-type {
+    @include for-mobile {
+      order: 1;
+    }
+  }
+
+  .column:first-of-type {
+    @include for-mobile {
+      order: 2;
+    }
+  }
+
+  @include for-mobile {
+    padding: 24px !important;
+  }
 
   .title {
     color: $special-color;
@@ -199,6 +291,10 @@ h2.title {
     margin-left: auto;
     text-align: justify;
     color: $special-color;
+
+    @include for-mobile {
+      width: 100%;
+    }
   }
 
   .checkbox {
@@ -245,13 +341,21 @@ h2.title {
   background-color: $special-color;
   padding: $section-padding-small;
 
+  @include for-mobile {
+    padding: 24px !important;
+  }
+
   h4.title {
     color: $light-color;
     font-family: $font-bold;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 3.75rem;
-    text-align: center;
+
+    @include for-mobile {
+      line-height: 2.75rem;
+      text-align: center !important;
+    }
   }
 
   .fa-shopping-basket {
@@ -260,6 +364,10 @@ h2.title {
 
   .is-flex {
     align-items: center;
+
+    @include for-mobile {
+      justify-content: center;
+    }
 
     &:first-of-type {
       justify-content: center;
@@ -275,6 +383,10 @@ h2.title {
 .menu {
   padding: $section-padding-medium;
   background-color: $new-special-color;
+
+  @include for-mobile {
+    padding: 24px !important;
+  }
 
   .title {
     color: $light-color;
@@ -327,6 +439,7 @@ h2.title {
 
 .contact {
   background-color: $special-color;
+  overflow: hidden;
 
   .image {
     height: 100%;
@@ -343,6 +456,16 @@ h2.title {
 
   .column:last-of-type {
     padding: 5rem 6.2rem !important;
+
+    @include for-mobile {
+      padding: 24px !important;
+    }
+  }
+
+  .field.is-grouped.is-grouped-right {
+    @include for-mobile {
+      justify-content: center;
+    }
   }
 
   form {
@@ -374,6 +497,10 @@ h2.title {
       .fa-paper-plane {
         margin-right: 1rem;
       }
+
+      @include for-mobile {
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -381,12 +508,20 @@ h2.title {
 .footer {
   background-color: $light-color;
   color: $special-color;
+  padding-top: $section-padding-one;
+
+  @include for-mobile {
+    padding-top: 1rem;
+  }
 
   .title {
     color: $special-color;
+
+    @include for-mobile {
+      text-align: center;
+    }
   }
 
-  padding-top: $section-padding-one;
   .map-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -406,5 +541,15 @@ h2.title {
     font-family: $font-bold;
     display: block;
     text-align: center;
+
+    @include for-mobile {
+      margin-top: 4rem;
+    }
+  }
+
+  p {
+    @include for-mobile {
+      text-align: center;
+    }
   }
 }
