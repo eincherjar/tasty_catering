@@ -85,28 +85,28 @@
       <div class="container">
         <div class="columns">
           <div class="column is-half">
-            <form action="#">
+            <form name="priceform" method="POST" action="priceform.php">
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" placeholder="Imię i nazwisko*" />
+                  <input class="input" type="text" name="name" placeholder="Imię i nazwisko*" />
                 </div>
               </div>
 
               <div class="field is-grouped">
                 <div class="control is-expanded">
-                  <input class="input" type="email" placeholder="Email*" />
+                  <input class="input" type="email" name="email" placeholder="Email*" />
                 </div>
                 <div class="control is-expanded">
-                  <input class="input" type="text" placeholder="Telefon*" />
+                  <input class="input" type="text" name="phone" placeholder="Telefon*" />
                 </div>
               </div>
 
               <div class="field is-grouped">
                 <div class="control is-expanded">
-                  <input class="input" type="text" placeholder="Data planowanej imprezy*" />
+                  <input class="input" type="text" name="party_date" placeholder="Data planowanej imprezy*" />
                 </div>
                 <div class="control is-expanded">
-                  <input class="input" type="text" placeholder="Przewidywana liczba gości*" />
+                  <input class="input" type="text" name="party_size" placeholder="Planowana liczba gości*" />
                 </div>
               </div>
 
@@ -119,7 +119,7 @@
                   <div class="field">
                     <div class="control is-expanded">
                       <label class="checkbox">
-                      <input type="checkbox" />
+                      <input type="checkbox" name="check_list[]" value="Przystawki" />
                       Przystawki
                       </label>
                     </div>
@@ -129,7 +129,7 @@
                   <div class="field">
                     <div class="control is-expanded">
                       <label class="checkbox">
-                      <input type="checkbox" />
+                      <input type="checkbox" name="check_list[]" value="Danie pierwsze" />
                       Danie pierwsze
                       </label>
                     </div>
@@ -139,7 +139,7 @@
                   <div class="field">
                     <div class="control is-expanded">
                       <label class="checkbox">
-                        <input type="checkbox" />
+                        <input type="checkbox" name="check_list[]" value="Danie główne" />
                         Danie główne
                       </label>
                     </div>
@@ -152,7 +152,7 @@
                 <div class="field">
                   <div class="control is-expanded">
                   <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="check_list[]" value="Ciasta i desery" />
                     Ciasta i desery
                   </label>
                 </div>
@@ -162,7 +162,7 @@
                 <div class="field">
                   <div class="control is-expanded">
                   <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="check_list[]" value="Wersja Vege" />
                     Wersja Vege
                   </label>
                 </div>
@@ -172,7 +172,7 @@
                 <div class="field">
                   <div class="control is-expanded">
                   <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="check_list[]" value="Obsługa" />
                     Obsługa
                   </label>
                 </div>
@@ -182,13 +182,13 @@
 
               <div class="field">
                 <div class="control">
-                  <textarea class="textarea" placeholder="Uwagi"></textarea>
+                  <textarea class="textarea" name="message" placeholder="Uwagi"></textarea>
                 </div>
               </div>
 
               <div class="field is-grouped is-grouped-right">
                 <div class="control">
-                  <button class="button is-special"><i class="fas fa-paper-plane"></i> wyślij</button>
+                  <button class="button is-special" type="submit"><i class="fas fa-paper-plane"></i> wyślij</button>
                 </div>
               </div>
             </form>
@@ -334,27 +334,26 @@
           <div class="column is-half is-paddingless">
             <div class="container">
               <h2 class="title has-text-centered">Kontakt</h2>
-              <form>
+              <form name="contactform" method="POST" action="contactform.php">
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="text" placeholder="Imię i nazwisko*" />
+                    <input class="input" type="text" name="name"  placeholder="Imię i nazwisko*" />
                   </div>
                 </div>
-
                 <div class="field">
                   <div class="control is-expanded">
-                    <input class="input" type="email" placeholder="Email*" />
+                    <input class="input" type="email" name="email" placeholder="Email*" />
                   </div>
                 </div>
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" placeholder="Uwagi"></textarea>
+                    <textarea class="textarea" name="message" placeholder="Wiadomość"></textarea>
                   </div>
                 </div>
 
                 <div class="field is-grouped is-grouped-right">
                   <div class="control">
-                    <button class="button is-special"><i class="fas fa-paper-plane"></i> wyślij</button>
+                    <button class="button is-special" type="submit"><i class="fas fa-paper-plane"></i> wyślij</button>
                   </div>
                 </div>
               </form>
